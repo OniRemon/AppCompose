@@ -112,7 +112,7 @@ class MainViewModel @Inject constructor(
             }.onSuccess {
                 _repos.value = it
             }.onFailure {
-                Log.e(TAG,"onFailureですよ$it")
+                Log.e(TAG,"onFailure$it")
                 _message.value = it.message.toString()
             }.also {
                 _inProgress.value = false
